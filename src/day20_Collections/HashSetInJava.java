@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 public class HashSetInJava {
 
@@ -97,22 +99,36 @@ public class HashSetInJava {
 	        hashSet.add(8.25);        // Double
 	        hashSet.add(true);        // Boolean
 	        
-	        for(Object e:hashSet) {
-	        	System.out.println(e);
-	        }
+	    System.out.println(hashSet);
 	        
-	        System.out.println();
 	        
 	        LinkedHashSet<Object> linkedHashSet = new LinkedHashSet<>();
 	        linkedHashSet.add(10);          // Integer
 	        linkedHashSet.add("Akshay");    // String
 	        linkedHashSet.add(8.25);        // Double
 	        linkedHashSet.add(true);        // Boolean
+	  
+	        System.out.println(linkedHashSet);
 	        
-	        for(Object e:linkedHashSet) {
-	        	System.out.println(e);
-	        }
+	       //Iterating HashSet elements through iterator
+	        
+	        System.out.println("Iterating HashSet elements through iterator");
+	        
+	       Iterator it = linkedHashSet.iterator();
+	       while(it.hasNext()) {
+	    	   System.out.println(it.next());
+	       }
+	       
+	       Set mySet = new HashSet<>(Arrays.asList("10", "Test", "Don"));
+	       List test = List.of("Akshay", "Rohini", "Test");
+	       System.out.println(test);
+	       mySet.add(10.25);
+	       mySet.addAll(test);
+	       System.out.println(mySet);
+	        
 	  
 	}
+	
+
 
 }

@@ -16,7 +16,8 @@ public class DemoColllections {
 		List<String> list = new ArrayList<>();
 		list.add("Akshay");
 		list.add("Pawar");
-		list.add("Akshay");            // duplicate
+		list.add("Akshay");
+		System.out.println("Normal List:"+list);// duplicate
 		Set<String> setFromList = new HashSet<String>(list); // List to Set
 		System.out.println("Set from List: " + setFromList);
 
@@ -28,13 +29,44 @@ public class DemoColllections {
 		System.out.println("List from Set: " + listFromSet);
 		
 		
-		Map m = new HashMap<>();
 		Map<Integer, String> m1 = new HashMap<Integer, String>();
 		m1.put(101, "Akshay");
 		m1.put(102, "Akshay");
 		
+		System.out.println("Map Printing ways:");
+		System.out.println("------------------");
+		
+		//Map printing ways.
+		//1.Direct way
+		System.out.println(m1);
+		
+		System.out.println("------------------");
+		
+		//2.Using entrySet
 		System.out.println(m1.entrySet());
 		
+		System.out.println("------------------");
+
+		//3.Using for each loop
+		for(Integer key:m1.keySet()) {
+			System.out.println(key+":"+m1.get(key));
+		}
+		
+		System.out.println("------------------");
+
+		//4 for loop with entrySet
+		  Set<Map.Entry<Integer, String>> entries= m1.entrySet();
+		  for(Map.Entry<Integer, String> entry:entries) {
+			  System.out.println(entry);
+		  }
+		  
+			System.out.println("------------------");
+
+			//5 for loop with entrySet and It's methods
+		  for(Map.Entry<Integer, String> entry:entries) {
+			  System.out.println(entry.getKey()+"===>"+entry.getValue());
+		  }
+
 		
 		
 	}

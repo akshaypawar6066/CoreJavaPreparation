@@ -1,5 +1,6 @@
 package JDK_1_8_Features.predefinedFunctionalInterfaces;
 
+import java.util.Scanner;
 import java.util.function.Predicate;
 
 public class PredicateInterfaceDemo {
@@ -39,6 +40,22 @@ public class PredicateInterfaceDemo {
 		}
 		
 		*/
+		
+		
+		
+		//Check if number is even or not.
+		
+		Predicate<Integer> isEven=(num)->num%2==0;
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter "
+				+ "any Number:");;
+		boolean result=isEven.test(sc.nextInt());
+		if(result==true) {
+			System.out.println("Entered Number is Even Number:");
+		}
+		else {
+			System.out.println("Entered Numbered is Odd Number:");
+		}
 		
 	}
 

@@ -43,6 +43,8 @@ public class StreamMethods {
 		List<String> limtedDataList=vehicleList.stream().limit(2).collect(Collectors.toList());
 		System.out.println(limtedDataList);
 		
+		vehicleList.stream().skip(6).forEach(data->System.out.println("After skipping data is:"+data));
+		
 		
 	}
 

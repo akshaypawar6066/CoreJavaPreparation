@@ -21,6 +21,15 @@ public class FilterDemo2 {
 
 		// just print -->Through method reference
 		names.stream().filter(s -> s.length() >= 6 && s.length() < 8).forEach(System.out::println);
+		
+		System.out.println("--------------------------------------------------------");
+		List<String>veryLongNames=names.stream().filter(str->str.length()>=8 && str.length()<10).collect(Collectors.toList());
+		System.out.println(veryLongNames);
+		
+		//Just to print
+		names.stream().filter(str->str.length()>=8 && str.length()<10).forEach(n-> System.out.println(n));
+		
+		
 
 	}
 

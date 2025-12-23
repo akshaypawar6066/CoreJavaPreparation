@@ -15,7 +15,13 @@ public static void main(String[] args) {
 	System.out.println("Generated UUUID:1"+randomUUDGenerator.get());
 	System.out.println("Generated UUUID:2"+randomUUDGenerator.get());
 	System.out.println("Generated UUUID:3"+randomUUDGenerator.get());
+	
+	Supplier<Double> randomGen = ()->Math.random();
+	Double d=randomGen.get();
+	System.out.println("Random double number generated is:"+d);
 
 }
 
 }
+
+

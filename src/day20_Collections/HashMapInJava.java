@@ -1,5 +1,6 @@
 package day20_Collections;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -11,9 +12,10 @@ public class HashMapInJava {
 		
 		//Declaraton 
 		
+		// HashMap hm = new HashMap();            //Raw type -->Avoid this.
 		//HashMap<Integer, String> hm = new HashMap<>();   //Child class ref., child class Object
 		//Map<String,String> hm  = new HashMap<>();         //Parent class ref., child class Object
-		// HashMap hm = new HashMap();            //Raw type -->Avoid this.
+		
 		 
 		
 		
@@ -34,7 +36,7 @@ public class HashMapInJava {
 		
 		System.out.println("-------------------------");
 		
-		System.out.println(hashmap.get(105));   //get(Object key)  -->Get thee value at specific key
+		System.out.println(hashmap.get(105));   //get(Object key)  -->Get the value at specific key
 		System.out.println("Removed value is:"+hashmap.remove(106));  //remove(Object key)--->remove the key-value pair/remove the mapping for the given key
 		System.out.println("After Removing:"+hashmap);
 		
@@ -54,17 +56,23 @@ public class HashMapInJava {
 		}
 		
 		System.out.println("--------------------------");
-		   hashmap.values();                //values()  --->To get Colllection of all the values
-		   for(String s : hashmap.values()) {
+             //values()  --->To get Colllection of all the values
+		   for(String s: hashmap.values()) {
 			   System.out.println(s);
 		   }
 			
-		   System.out.println("--------------------------");
-		  Set<Map.Entry<Integer, String>> entries= hashmap.entrySet();           //entrySet() -->To get all key-values. / to get alll the entriies(keys-values).
-		   
-		  for(Map.Entry<Integer, String> entry :entries) {
-			  System.out.println(entry.getKey()+"=>"+ entry.getValue());
-		  }
+		    System.out.println("--------------------------");
+		    
+		     Set<Map.Entry<Integer, String>> entries= hashmap.entrySet();          //entrySet() -->To get all key-values. / to get alll the entriies(keys-values).
+               
+		     for(Map.Entry<Integer, String> entry:entries) {
+		    	 System.out.println(entry);
+		     }
+		     System.out.println("-------------------------------");
+		     
+		     for(Map.Entry<Integer, String> entry: entries) {
+		    	 System.out.println(entry.getKey()+"==>"+entry.getValue());
+		     }
 		  
 		  System.out.println("--------------------------");
 		  
@@ -73,13 +81,23 @@ public class HashMapInJava {
 			  System.out.println(key+":"+hashmap.get(key));
 		  }
 		  
-		  System.out.println("--------------------------");
+		  System.out.println("--------------------------Test");
 		  //Iterate map through Iterator.
-		  Iterator<Map.Entry<Integer, String>> it=hashmap.entrySet().iterator();
+		    
+		 Iterator<Map.Entry<Integer, String>>it= hashmap.entrySet().iterator();
+		 while(it.hasNext()) {
+			Map.Entry<Integer, String> entry= it.next();
+			System.out.println(entry);
+			System.out.println(entry.getKey()+"=====>"+entry.getValue());
+		 }
+	  
+		  /*
+		  System.out.println("-----------------------------");
+		  
 		  while(it.hasNext()) {
-			  Map.Entry<Integer, String> entry=it.next();
-			  System.out.println(entry.getKey()+"===>"+ entry.getValue());
+			  System.out.println(it.next());
 		  }
+		  */
 		   
 	}
 

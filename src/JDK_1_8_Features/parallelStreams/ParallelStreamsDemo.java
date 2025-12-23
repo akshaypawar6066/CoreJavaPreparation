@@ -39,6 +39,7 @@ public static void main(String[] args) {
 		studentList.add(new Student("Sachin",95));
 		
 		//Using normal Stream.
+
 		
 		studentList.stream().filter(stu->stu.score>80)
 		.limit(5)
@@ -55,7 +56,6 @@ public static void main(String[] args) {
 		//Convert Stream into parallel Stream
 		studentList.stream().parallel().filter(stu->stu.score>80).limit(5).forEach(stu->System.out.println("Name:"+stu.getName()+"&"+"Score:"+stu.getScore()));
 
-		
 	}
 
 }

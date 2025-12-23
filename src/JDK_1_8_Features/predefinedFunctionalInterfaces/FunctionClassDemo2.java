@@ -42,7 +42,7 @@ public class FunctionClassDemo2 {
 		};
 		
 		
-    Predicate<Integer> p = i -> i>10000;
+    Predicate<Integer> p = i -> i>18000;
 		for (EmployeData emp : empList) {
 			
 			

@@ -51,7 +51,7 @@ public class PredicateInterface2Demo {
 		empSet.add(emp4);
 		empSet.add(emp5);
 
-		Predicate<Employe> empCheck = e -> (e.sallery > 50000 && e.emptID > 100);
+		Predicate<Employe> empCheck = e -> (e.sallery > 115000 && e.emptID > 100);
 
 		for (Employe emp : empSet) {
 			if (empCheck.test(emp)) {

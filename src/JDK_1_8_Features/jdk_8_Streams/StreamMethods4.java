@@ -28,7 +28,6 @@ public class StreamMethods4 {
 		//skip() --->it will skip the number of leading elements.
 		numbers.stream().skip(5).forEach(System.out::println);    //Terminal Operation we can directly used on Streams or after performing Non-Terminal Operations.
 		//Non-Terminal Operations we need to perform on streams.
-		
 		System.out.println("-------------------------------");
 
 		

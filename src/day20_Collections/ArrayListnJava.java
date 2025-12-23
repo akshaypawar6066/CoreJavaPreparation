@@ -14,7 +14,8 @@ public class ArrayListnJava {
 		/*
 		 * //Declartion
 		 * 
-		 * //ArrayList mylist = new ArrayList(); //List mylist = new ArrayList();
+		 * //ArrayList mylist = new ArrayList(); 
+		 * //List mylist = new ArrayList();
 		 * //List<Object> mylist = new ArrayList<Object>();
 		 * 
 		 * //ArrayList<Integer> mylits = new ArrayList<Integer>(); --:To store

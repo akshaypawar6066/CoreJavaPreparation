@@ -56,6 +56,7 @@ public class StreamMethods5 {
 		// 2.allMAtch()
 		System.out.println(numbers.stream().allMatch(n -> n > 0)); // true
 		System.out.println(numbers.stream().allMatch(n -> n > 10)); // false
+		
 
 		System.out.println("---------------");
 
@@ -73,7 +74,7 @@ public class StreamMethods5 {
 		}));
 
 		System.out.println(numbers.stream().findAny().get());   //With sequentiial stream it will return first elemnt but in parallel Stream it will retruyn any element which is faster processed.
-		System.out.println(numbers.stream().findAny().get());
+		System.out.println(numbers.stream().findFirst().get());
 		
 		
 		System.out.println("---------------");
@@ -88,6 +89,17 @@ public class StreamMethods5 {
 		
 		List<String> concanatedList=Stream.concat(stream1, stream2).collect(Collectors.toList());
 		System.out.println(concanatedList);
+		
+		List<String> trees= new ArrayList<String>(Arrays.asList("Babul", "Limmb", "Banana"));
+		List<String> flowersList = new ArrayList<String>(Arrays.asList("Zendu", "Gulab", "Mogara"));
+		
+		Stream<String> s1=trees.stream();
+		Stream<String> s2=flowersList.stream();
+		
+		List<String> concanated=Stream.concat(s1, s2).collect(Collectors.toList());
+		
+		System.out.println("Conncanated liat is:"+concanated);
+
 		
 		
 

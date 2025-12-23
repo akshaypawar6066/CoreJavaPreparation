@@ -20,12 +20,10 @@ public class StreamMethod2 {
 		System.out.println("Maximum Number is:"+maxNumber);
 		
 		//Find minimum number
-		//int minNumber=numberList.stream().min(Comparator.naturalOrder()).get();   OR
-		//System.out.println("Minimun Number is:"+minNumber);
-		
-		Optional<Integer> minValue=numberList.stream().min((val1, val2)-> val1.compareTo(val2));
-		int minNumber =minValue.get();
+		int minNumber=numberList.stream().min(Comparator.naturalOrder()).get();   
 		System.out.println("Minimun Number is:"+minNumber);
+		
+
 		
 	}
 
