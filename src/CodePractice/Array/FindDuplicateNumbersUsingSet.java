@@ -19,6 +19,7 @@ public class FindDuplicateNumbersUsingSet {
 		}
 		
 		System.out.println("Duplicate elements from Array are:"+dupValues);
+		System.out.println("Duplicate elements from Array are:"+hashSet);
 		
 	}
 
